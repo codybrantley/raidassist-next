@@ -1,15 +1,23 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from 'next'
+import { RouteHandler } from '@/utils/handlers/routeHandler'
+import { fetchDiscordData } from '@/utils/handlers/discordHandler'
 
-export default async function handler(request: NextApiRequest, response: NextApiResponse) {
-  const { query: { access_token }} = request
-  const res = await fetch(`${process.env.DISCORD_API_PATH}/users/@me/guilds`, {
-    method: 'GET',
-    headers: {
-      'Authorization': `Bearer ${access_token}`,
-      'Content-Type': 'application/json'
+export default async function handler(
+  request: NextApiRequest,
+  response: NextApiResponse
+) {
+  await RouteHandler(request, response, {
+    GET: async (request, response) => {
+      try {
+        const { status, data } = await fetchDiscordData(
+          request,
+          'discordUserGuilds',
+          'users/@me/guilds'
+        )
+        response.status(status).json(data)
+      } catch (error) {
+        console.error(error)
+      }
     },
   })
-  const data = await res.json();
-
-  response.status(200).json({data, 'date': Date.now()});
 }
