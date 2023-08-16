@@ -1,7 +1,7 @@
-import type { ReactElement, ReactNode } from 'react'
+import Layout from '@/components/layout/app-layout'
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
-import Layout from '@/components/layout/app-layout'
+import type { ReactElement, ReactNode } from 'react'
 import './styles.css'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {

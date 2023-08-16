@@ -1,6 +1,6 @@
-import { NextApiRequest, NextApiResponse } from 'next'
-import { RouteHandler } from '@/utils/handlers/routeHandler'
 import { fetchDiscordData } from '@/utils/handlers/discordHandler'
+import { RouteHandler } from '@/utils/handlers/routeHandler'
+import { NextApiRequest, NextApiResponse } from 'next'
 
 export default async function handler(
   request: NextApiRequest,

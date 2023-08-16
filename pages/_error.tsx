@@ -1,12 +1,12 @@
 import type { ReactElement } from 'react'
-import type { NextPageWithLayout } from './_app'
 import NestedLayout from '../components/layout/nested-layout'
+import type { NextPageWithLayout } from './_app'
 
 const Error: NextPageWithLayout = () => {
   return (
     <>
       <div className="container mx-auto">
-        <h2>Error Occured</h2>
+        <h2 className="text-2xl text-white">Error occured fetching data</h2>
       </div>
     </>
   )

@@ -1,8 +1,8 @@
+import prisma from '@/lib/prisma'
+import { PrismaAdapter } from '@next-auth/prisma-adapter'
+import { RefreshedAccount } from '@prisma/client'
 import NextAuth, { NextAuthOptions } from 'next-auth'
 import DiscordProvider from 'next-auth/providers/discord'
-import { PrismaAdapter } from '@next-auth/prisma-adapter'
-import prisma from '@/lib/prisma'
-import { RefreshedAccount } from '@prisma/client'
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),

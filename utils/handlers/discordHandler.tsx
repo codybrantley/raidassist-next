@@ -1,5 +1,5 @@
-import redis from '../../lib/redis'
 import { NextApiRequest } from 'next'
+import redis from '../../lib/redis'
 
 export const fetchDiscordData = async (
   request: NextApiRequest,

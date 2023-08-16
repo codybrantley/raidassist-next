@@ -1,5 +1,5 @@
-import type { ReactElement } from 'react'
 import NestedLayout from '@/components/layout/nested-layout'
+import type { ReactElement } from 'react'
 import type { NextPageWithLayout } from './_app'
 
 const Dashboard: NextPageWithLayout = () => {

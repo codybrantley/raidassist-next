@@ -1,6 +1,6 @@
+import { useSession } from 'next-auth/react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useSession } from 'next-auth/react'
 import SignOutButton from '../components/auth/sign-out-button'
 
 // The approach used in this component shows how to built a sign in and sign out

@@ -1,7 +1,7 @@
-import type { ReactElement } from 'react'
-import Link from 'next/link'
-import type { NextPageWithLayout } from './_app'
 import SignInButton from '@/components/auth/sign-in-button'
+import Link from 'next/link'
+import type { ReactElement } from 'react'
+import type { NextPageWithLayout } from './_app'
 
 const Login: NextPageWithLayout = () => {
   return (

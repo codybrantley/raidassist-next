@@ -1,8 +1,8 @@
-import type { ReactElement } from 'react'
-import type { NextPageWithLayout } from './_app'
 import SignInButton from '@/components/auth/sign-in-button'
 import Image from 'next/image'
+import type { ReactElement } from 'react'
 import Sword from '../public/sword.svg'
+import type { NextPageWithLayout } from './_app'
 
 const Page: NextPageWithLayout = () => {
   return (

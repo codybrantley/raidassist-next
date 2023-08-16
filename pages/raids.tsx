@@ -1,9 +1,9 @@
-import type { ReactElement } from 'react'
-import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
-import type { Guilds, Guild } from '@/types/discord/guild'
-import { getServerSession } from 'next-auth/next'
-import { authOptions } from './api/auth/[...nextauth]'
 import NestedLayout from '@/components/layout/nested-layout'
+import type { Guild, Guilds } from '@/types/discord/guild'
+import type { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import { getServerSession } from 'next-auth/next'
+import type { ReactElement } from 'react'
+import { authOptions } from './api/auth/[...nextauth]'
 
 export const getServerSideProps: GetServerSideProps<{
   guilds: Guilds
